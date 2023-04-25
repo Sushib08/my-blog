@@ -2,6 +2,7 @@ import Head from "next/head";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { getPostSlugs, getSinglePost } from "@/lib/posts";
+import Date from "@/components/Date";
 
 export async function getStaticProps({ params }) {
   const postData = await getSinglePost(params.postSlug);
@@ -61,6 +62,14 @@ export default function Post({ postData, featuredImageUrl }) {
             <h1 className="text-6xl text-center text-yellow-400 relative z-10 py-8 mt-12">
               {postData.title}
             </h1>
+            <div className="pb-4 text-slate-100 z-10">
+              Posté par{" "}
+              <span className=" text-lime-200 font-bold">Humaapi</span>,
+              dernière modification le :{" "}
+              <span className=" text-lime-200 font-bold">
+                <Date dateString={postData.modified} />
+              </span>
+            </div>
             <div
               dangerouslySetInnerHTML={{ __html: postData.excerpt }}
               className="relative z-10 text-left pl-4 border-l-4 border-lime-200 text-slate-200 text-2xl"
