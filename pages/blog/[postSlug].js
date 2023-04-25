@@ -57,7 +57,7 @@ export default function Post({ postData, featuredImageUrl }) {
           className="hero-area h-[60vh] min-h-[30rem] bg-no-repeat bg-cover bg-center"
           style={{ backgroundImage: featuredImageUrl }}
         >
-          <div className="absolute inset-0 opacity-30"></div>
+          <div className="absolute inset-40 z-0 opacity-40 bg-slate-700"></div>
           <div className="container mx-auto h-full flex flex-col justify-center lg:max-w-4xl">
             <h1 className="text-6xl text-center text-yellow-400 relative z-10 py-8 mt-12">
               {postData.title}
