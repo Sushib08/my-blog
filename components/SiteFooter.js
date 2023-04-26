@@ -16,6 +16,7 @@ export default function SiteFooter() {
                 alt="instagram"
                 width="40"
                 height="40"
+                className=" hover:translate-x-[1px] hover:translate-y-[1px]"
               />
             </Link>
           </li>
@@ -26,6 +27,7 @@ export default function SiteFooter() {
                 alt="pinterest"
                 width="40"
                 height="40"
+                className=" hover:translate-x-[1px] hover:translate-y-[1px]"
               />
             </Link>
           </li>
@@ -36,6 +38,7 @@ export default function SiteFooter() {
                 alt="twitter"
                 width="40"
                 height="40"
+                className=" hover:translate-x-[1px] hover:translate-y-[1px]"
               />
             </Link>
           </li>

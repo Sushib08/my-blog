@@ -7,7 +7,10 @@ export default function SiteHeader({ className }) {
       className={`${className} container mx-auto lg:max-w-4xl flex items-center justify-between`}
     >
       <div className="logo-area">
-        <Link href="/" className="flex justify-center">
+        <Link
+          href="/"
+          className="flex justify-center hover:translate-x-[1px] hover:translate-y-[1px]"
+        >
           <Image
             src="/logo.png"
             alt="logo"
