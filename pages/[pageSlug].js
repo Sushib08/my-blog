@@ -30,14 +30,22 @@ export default function Page({ pageData }) {
       <Head>
         <title>{pageData.title}</title>
       </Head>
-      <section className="bg-slate-700">
-        <SiteHeader className="header-page z-10 relative pb-4" />
-      </section>
+      <div className="h-[50vh] min-h-[20rem] bg-[url('/home.jpg')] relative">
+        <div className="absolute bg-slate-900 inset-0 z-0 opacity-40"></div>
+
+        <div className="container lg:max-w-4xl mx-auto">
+          <SiteHeader className="header-blog-home z-10 relative" />
+        </div>
+
+        <h1 className="text-6xl text-center text-slate-100 relative z-10 py-8">
+          {pageData.title}
+        </h1>
+        <p className="relative z-10 text-center text-slate-200 text-2xl">
+          Apprendre à Mieux nous Connaître
+        </p>
+      </div>
       <section className="content-area py-8">
         <article>
-          <h1 className="text-6xl text-center text-slate-700 relative py-8">
-            {pageData.title}
-          </h1>
           <div
             dangerouslySetInnerHTML={{ __html: pageData.content }}
             className="post-content container mx-auto lg:max-w-4xl"

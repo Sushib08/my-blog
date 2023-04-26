@@ -48,7 +48,7 @@ export default function Post({ postData, featuredImageUrl }) {
         />
       </Head>
 
-      <section className="bg-slate-700 bg-opacity-70 absolute w-full z-20">
+      <section className="bg-slate-900 bg-opacity-30 absolute w-full z-20">
         <SiteHeader className="header-single-post z-10 mb-3 relative" />
       </section>
 
@@ -57,9 +57,9 @@ export default function Post({ postData, featuredImageUrl }) {
           className="hero-area h-[60vh] min-h-[30rem] bg-no-repeat bg-cover bg-center"
           style={{ backgroundImage: featuredImageUrl }}
         >
-          <div className="absolute inset-40 z-0 opacity-40 bg-slate-700"></div>
+          <div className="absolute inset-[170px] -mt-4 z-0 opacity-30 bg-slate-800"></div>
           <div className="container mx-auto h-full flex flex-col justify-center lg:max-w-4xl">
-            <h1 className="text-6xl text-center text-yellow-400 relative z-10 py-8 mt-12">
+            <h1 className="text-[52px] text-center text-yellow-400 relative z-10 py-8 mt-12">
               {postData.title}
             </h1>
             <div className="pb-4 text-slate-100 z-10">
