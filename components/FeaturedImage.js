@@ -32,6 +32,7 @@ export default function FeaturedImage({ post }) {
         height={img.height}
         alt={post.title}
         className="h-full object-cover rounded-xl"
+        rel="preload"
       />
     </Link>
   );

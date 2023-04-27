@@ -57,7 +57,7 @@ export default function Contact() {
         </h1>
 
         <p className="relative z-10 text-center text-slate-200 text-2xl">
-          J'essaierais de Répondre à Tous vos Messages
+          J&apos; essaierais de Répondre à Tous vos Messages
         </p>
       </div>
       <section>
