@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { getAllPosts } from "@/lib/posts";
