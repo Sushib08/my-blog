@@ -7,8 +7,22 @@ export default function SiteFooter() {
       <footer id="site-footer" className="bg-slate-200 flex">
         <div className="flex justify-between items-center container mx-auto lg:max-w-5xl">
           <div className="py-3">&copy; 2022-2023 VanLife</div>
+          <div className=" mr-auto ml-auto">
+            <Link className="mr-4 hover:text-yellow-400" href="/about">
+              About
+            </Link>
+            <Link className="mr-4  hover:text-yellow-400" href="/legal-mention">
+              Mention Légales
+            </Link>
+            <Link
+              className="mr-4  hover:text-yellow-400"
+              href="/privacy-policy"
+            >
+              Politique de confidentialité
+            </Link>
+          </div>
         </div>
-        <ul className="flex [&>li>a]:px-8">
+        <ul className="flex py-4">
           <li className="mr-4">
             <Link href="https://www.instagram.com/?hl=fr">
               <Image

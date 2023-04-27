@@ -6,6 +6,8 @@ import SiteFooter from "@/components/SiteFooter";
 import { getAllPosts } from "@/lib/posts";
 import FeaturedImage from "@/components/FeaturedImage";
 import Date from "@/components/Date";
+import LoadMore from "@/components/LoadMore";
+import { useState } from "react";
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();
@@ -18,6 +20,8 @@ export async function getStaticProps() {
 }
 
 export default function BlogHome({ allPosts }) {
+  const [posts, setPosts] = useState(allPosts);
+
   return (
     <>
       <Head>
@@ -41,9 +45,9 @@ export default function BlogHome({ allPosts }) {
       </div>
 
       <main>
-        <section className=" post-list mt-4">
+        <section className=" post-list mt-4 ml-1">
           <ul>
-            {allPosts.nodes.map((post) => (
+            {posts.nodes.map((post) => (
               <li key={post.slug} className=" grid grid-cols-5 gap-4 mb-4">
                 <div className=" col-span-2">
                   <FeaturedImage post={post} />
@@ -80,6 +84,7 @@ export default function BlogHome({ allPosts }) {
               </li>
             ))}
           </ul>
+          <LoadMore posts={posts} setPosts={setPosts} />
         </section>
       </main>
       <SiteFooter />

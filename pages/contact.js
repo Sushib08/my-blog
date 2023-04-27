@@ -82,6 +82,7 @@ export default function Contact() {
           ) : null}
         </div>
       </section>
+      <SiteFooter />
     </>
   );
 }
